@@ -1,7 +1,11 @@
 Stellar ChainHub
 A modern blockchain platform designed to simplify decentralized interactions, digital asset management, and blockchain-based solutions through an intuitive and user-friendly interface.
+
+
 🚀 Overview
 Stellar ChainHub provides a centralized dashboard for users to explore blockchain services, manage digital assets, track transactions, and interact with decentralized technologies efficiently. The platform focuses on accessibility, performance, and security while delivering a seamless user experience.
+
+
 ✨ Features
 Modern and responsive user interface
 Secure blockchain integration
@@ -13,14 +17,16 @@ Cross-device compatibility
 Interactive dashboard and analytics
 User-friendly navigation
 Scalable architecture
+
+
 🛠️ Technologies Used
-HTML5
-CSS3
+HTML
+CSS
 JavaScript
-React.js
-Tailwind CSS
 Blockchain APIs
 Netlify Deployment
+
+
 📂 Project Structure
 stellar-chainhub/
 │
@@ -36,7 +42,3 @@ stellar-chainhub/
 ├── README.md
 └── netlify.toml
 
-.
-
-
-.
