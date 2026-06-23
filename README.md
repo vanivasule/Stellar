@@ -75,7 +75,7 @@ Before running the project locally, ensure you have:
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/stellar-chainhub.git
+git clone https://github.com/vanivasule/stellar-walletlink.git
 ```
 
 Navigate to the project directory:
