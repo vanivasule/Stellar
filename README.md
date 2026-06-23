@@ -4,7 +4,7 @@ A modern blockchain-powered platform built on the Stellar ecosystem, designed to
 
 ## 🚀 Live Demo
 
-**Website:** https://stellar-chainhub.netlify.app/
+**Website:** (https://stellar-walletlink.vercel.app/)
 
 ## 📖 About The Project
 
