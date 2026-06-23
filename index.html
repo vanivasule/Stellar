@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stellar Journey | Web3 Portal</title>
+  <meta name="description" content="Embark on the Stellar Journey to Mastery challenge. Connect your MetaMask wallet to unlock immersive smart contract and decentralized application quests.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Starfield background -->
+  <canvas id="starfield"></canvas>
+
+  <!-- Navigation Header -->
+  <header id="main-header">
+    <div class="container">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <div class="logo-circle"></div>
+          <div class="logo-dot"></div>
+        </div>
+        <span class="logo-text">Stellar Journey</span>
+      </a>
+      
+      <!-- Dynamic header button: will show address + disconnect or Connect Wallet -->
+      <div id="header-action-container">
+        <button id="header-connect-btn" class="btn btn-primary btn-connect-header">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg>
+          Connect Wallet
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <!-- Hero / Landing Section (Visible when disconnected) -->
+    <section id="hero-section" class="hero-section">
+      <div class="hero-badge">Embark on the challenge</div>
+      <h1 class="hero-title">
+        <span>Stellar Journey</span>
+        <span>To Mastery</span>
+      </h1>
+      <p class="hero-desc">
+        Unlock your decentralized potential. Connect your Web3 identity to access interstellar programming quests, build smart contracts, and claim your cryptographic rewards.
+      </p>
+      
+      <div style="max-width: 320px; width: 100%; margin: 0 auto;">
+        <button id="hero-connect-btn" class="btn btn-primary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg>
+          Connect Wallet
+        </button>
+      </div>
+    </section>
+
+    <!-- Dashboard Section (Visible when connected) -->
+    <section id="dashboard-section" class="dashboard-section">
+      
+      <div class="journey-header">
+        <h2 class="journey-title">Portal Dashboard</h2>
+        <p class="journey-subtitle">Welcome back, explorer. Here is your current galactic coordinate and quest progress.</p>
+      </div>
+
+      <div class="dashboard-grid">
+        
+        <!-- Left: Wallet Information -->
+        <div class="card">
+          <div class="wallet-card-header">
+            <h3 style="font-family: var(--font-display); font-size: 1.25rem;">Web3 Node</h3>
+            <div class="status-badge">
+              <span class="status-dot"></span>
+              <span id="network-name">Ethereum</span>
+            </div>
+          </div>
+          
+          <div class="wallet-balance-container">
+            <p class="balance-label">Current Balance</p>
+            <h2 class="balance-val"><span id="wallet-balance">0.0000</span> <span class="balance-symbol">ETH</span></h2>
+          </div>
+
+          <div class="wallet-address-container">
+            <p class="address-label">Wallet Address</p>
+            <div class="address-box">
+              <span id="wallet-address" class="address-text">0x0000...0000</span>
+              <button id="copy-address-btn" class="copy-btn" title="Copy Address">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                Copy
+              </button>
+            </div>
+          </div>
+
+          <button id="disconnect-btn" class="btn btn-disconnect">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/></svg>
+            Disconnect Wallet
+          </button>
+        </div>
+
+        <!-- Right: Interactive Progression Challenges -->
+        <div class="card">
+          <div class="journey-header" style="margin-bottom: 1.5rem;">
+            <h3 style="font-family: var(--font-display); font-size: 1.25rem;">Challenge Milestones</h3>
+          </div>
+          
+          <div class="timeline">
+            <!-- Timeline Quest 1 -->
+            <div id="quest-1" class="timeline-item completed">
+              <div class="timeline-dot">1</div>
+              <div class="timeline-content">
+                <h4>
+                  <span>The Singularity</span>
+                  <span class="quest-status">Completed</span>
+                </h4>
+                <p>Integrate your cryptographic signature. Establish a connection to MetaMask wallet node.</p>
+              </div>
+            </div>
+
+            <!-- Timeline Quest 2 -->
+            <div id="quest-2" class="timeline-item active">
+              <div class="timeline-dot">2</div>
+              <div class="timeline-content">
+                <h4>
+                  <span>Cosmic Fuel Run</span>
+                  <span class="quest-status">In Progress</span>
+                </h4>
+                <p>Acquire Testnet Ether tokens. Ensure your wallet has fuel (> 0.001 ETH) to trigger transactions.</p>
+              </div>
+            </div>
+
+            <!-- Timeline Quest 3 -->
+            <div id="quest-3" class="timeline-item">
+              <div class="timeline-dot">3</div>
+              <div class="timeline-content">
+                <h4>
+                  <span>Orbit Selection</span>
+                  <span class="quest-status">Locked</span>
+                </h4>
+                <p>Choose your deployment network (Sepolia/Stellar/Arbitrum) and deploy your first custom smart contract.</p>
+              </div>
+            </div>
+
+            <!-- Timeline Quest 4 -->
+            <div id="quest-4" class="timeline-item">
+              <div class="timeline-dot">4</div>
+              <div class="timeline-content">
+                <h4>
+                  <span>Stellar Graduate</span>
+                  <span class="quest-status">Locked</span>
+                </h4>
+                <p>Verify contract source code on-chain to mint your soulbound Graduation NFT.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Modals & Prompts -->
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="modal">
+      <div class="modal-logo">🦊</div>
+      <h3 id="modal-title">MetaMask Required</h3>
+      <p id="modal-message">We couldn't detect MetaMask in your browser. Install the extension to connect your wallet and continue the Stellar Journey.</p>
+      <div style="display: flex; flex-direction: column; gap: 0.5rem; align-items: center;">
+        <a id="modal-action-btn" href="https://metamask.io/download/" target="_blank" class="btn btn-primary" style="width: auto; min-width: 200px;">
+          Install MetaMask
+        </a>
+        <button id="modal-close-btn" class="modal-close-btn">Close Window</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast toast-success">
+    <div class="toast-icon">✓</div>
+    <span id="toast-message">Success message!</span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
