@@ -38,7 +38,7 @@ With a clean design, responsive layout, and performance-oriented architecture, S
 - Stellar SDK
 
 ### Deployment
-- Netlify
+- Vercel
 
 ## 📂 Project Structure
 
